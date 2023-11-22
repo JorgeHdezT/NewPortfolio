@@ -19,13 +19,10 @@ section {
 
 }
 
-.navbar::after {
-  margin-top: 10px;
-  content:"";
-  width: 100%;
-  height: 1px;
-  background-color: #fff;
+.navbar-nav li img{
+  width: 50px;
 }
+
 
 .navbar-brand img{
   width: 50%;
@@ -154,6 +151,24 @@ body {
   color: black;
 }
 
+
+.VerMas {
+  margin-top: 50px;
+  font-size: 30px;
+  border: 2px solid darkturquoise;
+  background-color: rgb(5, 59, 59);
+  padding: 10px;
+  border-radius: 10px;
+  transition: all .25s;
+}
+
+.VerMas:hover {
+  transform: scale(1.1);
+  background-color: rgb(0, 99, 99);
+  filter: drop-shadow(0px 10px 10px black);
+
+}
+
 /*REDES*/
 
 #socialmediaContainer {
@@ -185,6 +200,12 @@ body {
 
 .iconLink a img {
   filter: invert();
+
+}
+
+#githubicon {
+  width: 35px;
+
 }
 
 .siguiente {
@@ -200,8 +221,81 @@ body {
   color: white;
   border: 3px solid white;
   font-size: 30px;
+  
+  animation: bounce alternate-reverse infinite .65s;
+}
+
+@keyframes bounce {
+  from {
+    top: 30px;
+    filter: drop-shadow(0px 0px 5px darkturquoise);
+  }
+  to {
+    top: 25px;
+  }
 }
 
 #redes .siguiente {
   transform: rotate(180deg);
+}
+
+#divisor {
+  width: 100%;
+  height: 1px;
+  background-color: white;
+}
+
+
+@media (min-width: 1024px) {
+
+  .main {
+    height: 93vh;
+    background-image: url("../images/h1.webp");
+    background-size: 680px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    
+  }
+
+  .navbar {
+    padding: 5px;
+    z-index: 20;
+    font-size: 30px;
+    background-color: #0F172A;
+  
+  }
+
+  body::-webkit-scrollbar {
+    display: none;
+  } 
+
+  #Proyectos {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  #Proyectos a {
+    margin-top: 30px;
+  }
+
+  #Proyectos h1 {
+    margin-top: 80px;
+  }
+
+  #ContenedorProyectos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  .VerMas {
+    margin-top: 80px;
+    font-size: 30px;
+    cursor: pointer;
+  }
 }
