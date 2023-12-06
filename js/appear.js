@@ -17,3 +17,16 @@ function reveal() {
   }
     
 }
+
+// Asegúrate de que el DOM esté completamente cargado antes de agregar el evento
+document.addEventListener("DOMContentLoaded", function() {
+  // Agrega el evento de reproducción de audio al hacer hover
+  var linkMarcelo = document.getElementById("imgmarcelo");
+  linkMarcelo.addEventListener("mouseover", playAudio);
+});
+
+// Función para reproducir el audio
+function playAudio() {
+  var audio = document.getElementById("audio");
+  audio.play();
+}
