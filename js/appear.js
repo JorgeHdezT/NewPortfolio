@@ -20,9 +20,9 @@ function reveal() {
 
 // Asegúrate de que el DOM esté completamente cargado antes de agregar el evento
 document.addEventListener("DOMContentLoaded", function() {
-  // Agrega el evento de reproducción de audio al hacer hover
-  var linkMarcelo = document.getElementById("imgmarcelo");
-  linkMarcelo.addEventListener("mouseover", playAudio);
+  // Agrega el evento de reproducción de audio al hacer clic en la imagen
+  var imgMarcelo = document.getElementById("imgmarcelo");
+  imgMarcelo.addEventListener("click", playAudio);
 });
 
 // Función para reproducir el audio
