@@ -114,7 +114,8 @@ body {
 
 #ContenedorProyectos {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 20px;
@@ -123,7 +124,7 @@ body {
 
 .card {
   padding: 5px;
-  width: 80%;
+  width: 40%;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
   backdrop-filter: filter(blur(10px));
@@ -345,7 +346,7 @@ body {
   }
 
   #Proyectos h1 {
-    margin-top: 80px;
+    margin-top: 100px;
   }
 
   #ContenedorProyectos {
@@ -355,9 +356,22 @@ body {
     cursor: pointer;
   }
 
+  .card {
+    padding: 5px;
+    width: 20%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    backdrop-filter: filter(blur(10px));
+    transition: all .5s;
+  }
+
   .VerMas {
     margin-top: 80px;
     font-size: 30px;
     cursor: pointer;
   }
+
+
+  
+
 }

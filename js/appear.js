@@ -18,15 +18,14 @@ function reveal() {
     
 }
 
-// Asegúrate de que el DOM esté completamente cargado antes de agregar el evento
-document.addEventListener("DOMContentLoaded", function() {
-  // Agrega el evento de reproducción de audio al hacer clic en la imagen
-  var imgMarcelo = document.getElementById("imgmarcelo");
-  imgMarcelo.addEventListener("click", playAudio);
-});
+// document.addEventListener("DOMContentLoaded", function() {
+//   // Agrego el evento de reproducción de audio al hacer clic en la imagen
+//   var imgMarcelo = document.getElementById("imgmarcelo");
+//   imgMarcelo.addEventListener("click", playAudio);
+// });
 
-// Función para reproducir el audio
-function playAudio() {
-  var audio = document.getElementById("audio");
-  audio.play();
-}
+// // Función para reproducir el audio
+// function playAudio() {
+//   var audio = document.getElementById("audio");
+//   audio.play();
+// }
