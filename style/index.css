@@ -1,5 +1,16 @@
+@font-face {
+  font-family: MainFont;
+  src: url(../fonts/Euclid\ Circular\ A\ Regular.ttf);
+}
+
+@font-face {
+  font-family: MainBold;
+  src: url(../fonts/Euclid\ Circular\ A\ Bold.ttf);
+}
+
 * {
-  color: white;
+  font-family: 'MainFont';
+  color: rgb(20, 20, 20);
 }
 
 a {
@@ -14,22 +25,29 @@ section {
 .navbar {
   padding: 5px;
   z-index: 20;
+  color: rgb(255, 255, 255);
 
-  background-color: #0F172A;
-
+  background-color: #ffffff;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.079);
 }
 
-.navbar-nav li img{
+.navbar-brand {
+  background: -webkit-linear-gradient(#00d0ff, #001aff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.navbar-nav li img {
   width: 50px;
 }
 
 
-.navbar-brand img{
+.navbar-brand img {
   width: 50%;
 }
 
 body {
-  background-color: #0F172A;
+  background-color: #d1e5ff;
 }
 
 .main {
@@ -39,7 +57,10 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: bottom;
-  
+  & svg {
+    border: 2px solid;
+
+  }
 }
 
 #main_content {
@@ -49,30 +70,56 @@ body {
   align-items: center;
   padding: 10px;
   backdrop-filter: blur(10px);
+  
 }
 
 #titulo {
+  font-family: 'MainBold';
   display: flex;
   align-items: cebter;
   justify-content: center;
   gap: 0px;
+  font-weight: bold;
 }
 
 #titulo h1 {
   font-size: 40px;
+  text-align: center;
+  font-weight: bolder;
 }
 
 #titulo h1 span {
-  color: darkturquoise;
+  background: -webkit-linear-gradient(#00c8ff, #2600ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 #main_content p {
   text-align: center;
   font-size: 25px;
+  margin-bottom: -5px;
+}
+
+#main_content {
+  margin: 0 auto;
+  text-align: center;
+
+  & i {
+    padding: 20px;
+  }
 }
 
 #main_content h1:nth-child(n+2) {
-  color:orange;
+  color: orange;
+}
+
+.navbar-toggler {
+  border: 2px solid rgb(0, 102, 255);
+}
+
+.navbar-toggler:active {
+  border: 2px solid rgb(0, 102, 255);
+
 }
 
 
@@ -80,14 +127,18 @@ body {
 /*****/
 
 .info {
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   transition: all 1s;
+  background-color: white;
+  box-shadow: none;
 }
+
+
 
 
 .reveal {
@@ -105,8 +156,10 @@ body {
 /*Proyectos*/
 
 #Proyectos {
-  height: 100%;
+
+  border: 0px solid;
 }
+
 
 #Proyectos h1 {
   margin-top: 20px;
@@ -120,26 +173,26 @@ body {
   justify-content: center;
   gap: 20px;
   transition: all 1s;
+  padding: 20px;
 }
 
 .card {
+  border: none;
   padding: 5px;
-  width: 40%;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  backdrop-filter: filter(blur(10px));
+  width: 100%;
   transition: all .5s;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
-.card img{
+.card img {
   border-radius: 10px;
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 /* On mouse-over, add a deeper shadow */
 .card:hover {
-  filter: brightness(70%);
-  box-shadow: 0 8px 16px 0 darkturquoise;
-  transform: scale(0.9);
+  transform: translateY(-20px);
 }
 
 /* Add some padding inside the card container */
@@ -155,18 +208,27 @@ body {
 
 .VerMas {
   margin-top: 50px;
-  font-size: 30px;
-  border: 2px solid darkturquoise;
-  background-color: rgb(5, 59, 59);
+  font-size: 25px;
+  color: white;
   padding: 10px;
   border-radius: 10px;
   transition: all .25s;
+
+  background: rgb(45, 49, 189);
+  background: -moz-linear-gradient(90deg, rgba(45, 49, 189, 1) 0%, rgba(0, 209, 255, 1) 100%);
+  background: -webkit-linear-gradient(90deg, rgba(45, 49, 189, 1) 0%, rgba(0, 209, 255, 1) 100%);
+  background: linear-gradient(90deg, rgba(45, 49, 189, 1) 0%, rgba(0, 209, 255, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2d31bd", endColorstr="#00d1ff", GradientType=1);
+}
+
+.VerMas a {
+  color: white;
+  font-weight: normal;
 }
 
 .VerMas:hover {
   transform: scale(1.1);
-  background-color: rgb(0, 99, 99);
-  filter: drop-shadow(0px 10px 10px black);
+  filter: drop-shadow(0px 10px 5px rgba(0, 0, 0, 0.375));
 
 }
 
@@ -174,12 +236,15 @@ body {
 
 #socialmediaContainer {
   display: flex;
-  gap: 5px;
+  flex-direction: row;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .iconLink {
-  width: 50px;
-  height: 50px;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -187,26 +252,48 @@ body {
 
 #redes #divisor {
   width: 60%;
-  height: 1px;
+  height: 2px;
   background-color: white;
 }
 
 #redes {
+  background-color: #d1e5ff;
   transition: all 1s;
 }
 
-.iconLink a {
+.iconLink {
+  background: rgb(45, 49, 189);
+  background: -moz-linear-gradient(90deg, rgba(45, 49, 189, 1) 0%, rgba(0, 209, 255, 1) 100%);
+  background: -webkit-linear-gradient(90deg, rgba(45, 49, 189, 1) 0%, rgba(0, 209, 255, 1) 100%);
+  background: linear-gradient(90deg, rgba(45, 49, 189, 1) 0%, rgba(0, 209, 255, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2d31bd", endColorstr="#00d1ff", GradientType=1);
+  border-radius: 50%;
+  box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.258);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 80px;  
+  height: 80px;;
+}
+.iconLink a{
+  
   width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .iconLink a img {
+
   filter: invert();
 
 }
 
-#githubicon {
-  width: 35px;
-
+#github {
+  margin: 0 auto;
+  width: 60px;
 }
 
 /*Marcelo!*/
@@ -220,6 +307,7 @@ body {
   height: 1px;
   background-color: #fff;
 }
+
 #linkmarcelo {
   font-weight: bolder;
   color: black;
@@ -240,13 +328,15 @@ body {
 #marcelo img:hover {
   /* Al hacer hover, aplicar transformaciones */
   transform: scale(1.2) rotate(360deg);
-  animation: spin .75s infinite linear; /* Agregar animación de rotación infinita */
+  animation: spin .75s infinite linear;
+  /* Agregar animación de rotación infinita */
 }
 
 @keyframes spin {
+
   /* Definir la animación de rotación */
   0% {
-    
+
     filter: drop-shadow(5px 5px 10px green);
 
   }
@@ -284,7 +374,7 @@ body {
   color: white;
   border: 3px solid white;
   font-size: 30px;
-  
+
   animation: bounce alternate-reverse infinite .65s;
 }
 
@@ -293,6 +383,7 @@ body {
     top: 30px;
     filter: drop-shadow(0px 0px 5px darkturquoise);
   }
+
   to {
     top: 25px;
   }
@@ -318,27 +409,47 @@ body {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: bottom;
-    
+
+  }
+
+  #titulo h1 {
+    margin-top: 20px;
+    font-size: 80px;
+    width: 1500px;
+  }
+  #main_content {
+    & p {
+      font-size: 50px;
+    }
+    & i {
+      width: 50%;
+      font-size: 20px;
+    }
   }
 
   .navbar {
     padding: 5px;
     z-index: 20;
-    font-size: 30px;
-    background-color: #0F172A;
-  
+    font-size: 20px;
+    background-color: white;
+
+  }
+
+  .navbar-brand {
+    font-size: 25px;
+    font-weight: bold;
   }
 
   body::-webkit-scrollbar {
     display: none;
-  } 
+  }
 
   #Proyectos {
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+
   }
 
   #Proyectos a {
@@ -352,17 +463,21 @@ body {
   #ContenedorProyectos {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     cursor: pointer;
   }
 
+
+
   .card {
+    border: none;
     padding: 5px;
     width: 20%;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    backdrop-filter: filter(blur(10px));
     transition: all .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 
   .VerMas {
@@ -371,7 +486,68 @@ body {
     cursor: pointer;
   }
 
+  /*REDES*/
 
+#socialmediaContainer {
+  display: flex;
+  gap: 20px;
+}
+
+.iconLink {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#redes #divisor {
+  width: 60%;
+  height: 2px;
+  background-color: white;
+}
+
+#redes {
+  background-color: #d1e5ff;
+  transition: all 1s;
+}
+
+.iconLink {
+  background: rgb(45, 49, 189);
+  background: -moz-linear-gradient(90deg, rgba(45, 49, 189, 1) 0%, rgba(0, 209, 255, 1) 100%);
+  background: -webkit-linear-gradient(90deg, rgba(45, 49, 189, 1) 0%, rgba(0, 209, 255, 1) 100%);
+  background: linear-gradient(90deg, rgba(45, 49, 189, 1) 0%, rgba(0, 209, 255, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2d31bd", endColorstr="#00d1ff", GradientType=1);
+  border-radius: 50%;
+  box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.258);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 80px;  
+  height: 80px;;
+}
+.iconLink a{
   
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.iconLink a img {
+
+  filter: invert();
+
+}
+
+#github {
+  margin: 0 auto;
+  width: 60px;
+}
+
+
+
 
 }
