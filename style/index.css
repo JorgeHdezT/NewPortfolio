@@ -452,7 +452,8 @@ body {
     font-weight: bold;
   }
 
-  & section {
+  & #referencia {
+    width: 100%;
     padding: 25px;
     overflow: hidden;
     height: 800px;
@@ -593,7 +594,7 @@ body {
   }
 
   #redes {
-    background-color: #d1e5ff;
+    background-color: white;
     transition: all 1s;
   }
 
@@ -639,7 +640,7 @@ body {
   /* Form */
 
   #contacto {
-
+    background-color: #d1e5ff;
     & div {
       display: flex;
       flex-direction: row-reverse;
