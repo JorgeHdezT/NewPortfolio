@@ -18,14 +18,45 @@ function reveal() {
     
 }
 
-// document.addEventListener("DOMContentLoaded", function() {
-//   // Agrego el evento de reproducción de audio al hacer clic en la imagen
-//   var imgMarcelo = document.getElementById("imgmarcelo");
-//   imgMarcelo.addEventListener("click", playAudio);
-// });
+document.addEventListener('DOMContentLoaded', function () {
+  const cards = document.querySelectorAll('#ContenedorProyectos .card');
 
-// // Función para reproducir el audio
-// function playAudio() {
-//   var audio = document.getElementById("audio");
-//   audio.play();
-// }
+  cards.forEach(card => {
+    card.addEventListener('mouseover', () => {
+      cards.forEach(otherCard => {
+        if (otherCard !== card) {
+          otherCard.classList.add('blur');
+        }
+      });
+    });
+
+    card.addEventListener('mouseout', () => {
+      cards.forEach(otherCard => {
+        otherCard.classList.remove('blur');
+      });
+    });
+  });
+});
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const xpcards = document.querySelectorAll('#referencia .xpcard');
+
+  xpcards.forEach(card => {
+    card.addEventListener('mouseover', () => {
+      xpcards.forEach(otherCard => {
+        if (otherCard !== card) {
+          otherCard.classList.add('blur');
+        }
+      });
+    });
+
+    card.addEventListener('mouseout', () => {
+      xpcards.forEach(otherCard => {
+        otherCard.classList.remove('blur');
+      });
+    });
+  });
+});
+

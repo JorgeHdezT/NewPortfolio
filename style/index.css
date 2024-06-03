@@ -3,10 +3,6 @@
   src: url(../fonts/Euclid\ Circular\ A\ Regular.ttf);
 }
 
-@font-face {
-  font-family: MainBold;
-  src: url(../fonts/Euclid\ Circular\ A\ Bold.ttf);
-}
 
 * {
   font-family: 'MainFont';
@@ -21,11 +17,13 @@ a {
 
 .navbar {
   padding: 5px;
-  z-index: 20;
+  z-index: 999999;
   color: rgb(255, 255, 255);
 
   background-color: #ffffff;
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.079);
+  position: fixed;
+  width: 100%;
 }
 
 .navbar-brand {
@@ -48,15 +46,28 @@ body {
 }
 
 .main {
-  height: 93vh;
-  background-image: url("../images/h1.png");
-  background-size: 450px;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: bottom;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  margin-top: 100px;
+}
 
-  & svg {
-    border: 2px solid;
+#imagenPrincipal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  & img {
+    width: 100%;
+    z-index: -1;
+  }
+  & #ola {
+    z-index: 1;
+    margin-top: -50px;
+
 
   }
 }
@@ -68,7 +79,16 @@ body {
   align-items: center;
   padding: 10px;
   backdrop-filter: blur(10px);
-
+  & b {
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+    font-weight: bolder;
+    color: blue;
+    background: -webkit-linear-gradient(#00d0ff, #001aff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
 
 #titulo {
@@ -155,7 +175,8 @@ body {
 
 #Proyectos {
 
-  border: 0px solid;
+  z-index: 1;
+
 }
 
 
@@ -239,6 +260,7 @@ body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  height: 300px;
 }
 
 .iconLink {
@@ -255,9 +277,15 @@ body {
 }
 
 #redes {
-  background-color: #d1e5ff;
+  display: flex;
+  flex-direction: column;
+  align-items: top;
+  background-color: white;
   transition: all 1s;
+  height: 100%
 }
+
+
 
 .iconLink {
   background: rgb(45, 49, 189);
@@ -297,70 +325,7 @@ body {
   width: 60px;
 }
 
-/*Marcelo!*/
 
-#marcelo h1 {
-  margin-top: 100px;
-}
-
-#marcelo #divisor {
-  width: 80%;
-  height: 1px;
-  background-color: #fff;
-}
-
-#linkmarcelo {
-  font-weight: bolder;
-  color: black;
-  background-color: lightgreen;
-  font-style: none;
-  padding: 5px;
-  border-radius: 10px;
-  border: 4px solid green;
-
-  margin-top: 50px;
-}
-
-#marcelo img {
-  width: 400px;
-  transition: transform .75s ease-in-out;
-}
-
-#marcelo img:hover {
-  /* Al hacer hover, aplicar transformaciones */
-  transform: scale(1.2) rotate(360deg);
-  animation: spin .75s infinite linear;
-  /* Agregar animación de rotación infinita */
-}
-
-@keyframes spin {
-
-  /* Definir la animación de rotación */
-  0% {
-
-    filter: drop-shadow(5px 5px 10px green);
-
-  }
-
-  25% {
-    filter: drop-shadow(5px 5px 10px blue);
-
-  }
-
-  50% {
-    filter: drop-shadow(5px 5px 10px orange);
-  }
-
-  75% {
-    filter: drop-shadow(5px 5px 10px purple);
-  }
-
-  100% {
-    transform: rotate(360deg);
-    filter: drop-shadow(5px 5px 10px red);
-
-  }
-}
 
 .siguiente {
   margin-top: 30px;
@@ -402,6 +367,8 @@ body {
 
 
 #contacto {
+
+  background-color: #d1e5ff;
 
   & div {
     display: flex;
@@ -446,7 +413,9 @@ body {
 #experienciaLab {
   margin-top: -100px;
   background-color: #d1e5ff;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   & h1 {
     margin-top: 50px !important;
     font-weight: bold;
@@ -456,12 +425,20 @@ body {
     width: 100%;
     padding: 25px;
     overflow: hidden;
-    height: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    & aside {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
     & .xpcard {
       box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-      position: absolute;
       width: 80%; /* Ajusta el ancho según sea necesario */
-      left: 10%; /* Centra las tarjetas horizontalmente */
       margin-bottom: 20px; /* Espaciado inferior entre tarjetas */
       background: #fff; /* Fondo blanco para que se note la superposición */
       padding: 20px; /* Relleno interno */
@@ -469,31 +446,56 @@ body {
       border-radius: 10px; /* Bordes redondeados */
     }
 
-    #xp1 {
-      z-index: 3;
-    }
     
-    #xp2 {
-      z-index: 2;
-    }
+
     
-    #xp3 {
-      z-index: 1;
-    }
   }
 }
+
+.destacar {
+  text-align: center;
+  background: -webkit-linear-gradient(#00d0ff, #001aff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#ContenedorProyectos {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+
+
+.blur {
+  filter: blur(2px);
+}
+
 
 
 @media (min-width: 1024px) {
 
+  h1 {
+    font-weight: bold;
+  }
   .main {
-    height: 93vh;
-    background-image: url("../images/h1.webp");
-    background-size: 680px;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: bottom;
+    margin-top: 100px;
+  }
 
+  #imagenPrincipal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    & img {
+      width: 30%;
+      margin-top: 0px;
+    };
+    & #ola {
+      width: 100%;
+      z-index: 20;
+      margin-top: -180px;
+    }
   }
 
   #titulo h1 {
@@ -515,7 +517,7 @@ body {
 
   .navbar {
     padding: 5px;
-    z-index: 20;
+    z-index: 99999;
     font-size: 20px;
     background-color: white;
 
@@ -634,6 +636,53 @@ body {
     margin: 0 auto;
     width: 60px;
   }
+
+  #referencia {
+    height: 520px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row !important;
+    gap: 5px;
+    align-items: flex-start !important;
+
+  }
+
+  aside {
+    width: 30%;
+  }
+
+  .xpcard {
+    border-radius: 25px !important;
+    transition: all .5s;
+  }
+
+  .xpcard:hover {
+    transform: translateY(-10px);
+    border-radius: 25px;
+  }
+
+  
+
+  #xp2 {
+    width: 100% !important;
+  }
+
+  #xp3 {
+    width: 100% !important;
+  }
+
+  #xp1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    height: 100%;
+    width: 30% !important;
+    margin-bottom: 0;
+  }
+
+
 
 
 
