@@ -176,6 +176,7 @@ body {
 #Proyectos {
 
   z-index: 1;
+  background-color: #d1e5ff;
 
 }
 
@@ -280,7 +281,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: top;
-  background-color: white;
+  background-color: #d1e5ff !important;
   transition: all 1s;
   height: 100%
 }
@@ -368,7 +369,7 @@ body {
 
 #contacto {
 
-  background-color: #d1e5ff;
+  background-color: white !important;
 
   & div {
     display: flex;
@@ -412,7 +413,7 @@ body {
 
 #experienciaLab {
   margin-top: -100px;
-  background-color: #d1e5ff;
+  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -471,9 +472,50 @@ body {
   filter: blur(2px);
 }
 
+#Tecnologias {
+  height: 50dvh;
+}
+
+#iconos {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  & svg {
+    background-color: white;
+    padding: 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  }
+}
+
 
 
 @media (min-width: 1024px) {
+
+  #iconos {
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    & svg {
+      background-color: white;
+      padding: 10px;
+      width: 100px;
+      height: 100px;
+      border-radius: 15px;
+      box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    }
+  }
 
   h1 {
     font-weight: bold;
