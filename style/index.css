@@ -177,6 +177,7 @@ body {
 
   z-index: 1;
   background-color: #d1e5ff;
+  height: 100%;
 
 }
 
@@ -227,7 +228,8 @@ body {
 
 
 .VerMas {
-  margin-top: 50px;
+  margin-bottom: 40px;
+  visibility: hidden;
   font-size: 25px;
   color: white;
   padding: 10px;
