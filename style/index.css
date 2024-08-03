@@ -485,7 +485,7 @@ body {
 }
 
 #Tecnologias {
-  height: 50dvh;
+  height: auto;
 }
 
 #iconos {
@@ -496,6 +496,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  margin-bottom: 20px;
   & svg {
     background-color: white;
     padding: 10px;
