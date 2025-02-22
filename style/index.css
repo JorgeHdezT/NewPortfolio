@@ -890,10 +890,10 @@ body {
     width: 0;
   }
   60% {
-    width: 32ch; /* Usa 'ch' para adaptarse al contenido del texto */
+    width: 26ch; /* Usa 'ch' para adaptarse al contenido del texto */
   }
   100% {
-    width: 32ch;
+    width: 26ch;
   }
 }
 
