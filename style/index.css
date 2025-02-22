@@ -872,3 +872,33 @@ body {
   }
 
 }
+
+
+.typing-effect {
+  font-size: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid rgba(0, 0, 0, 0.50); /* Cursor parpadeante */
+  display: inline-block;
+  width: 0;
+  animation: typing 6s steps(20, end) infinite, blink 0.7s infinite;
+}
+
+/* Ajusta el ancho máximo según el contenido */
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  60% {
+    width: 32ch; /* Usa 'ch' para adaptarse al contenido del texto */
+  }
+  100% {
+    width: 32ch;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
