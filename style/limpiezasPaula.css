@@ -1,0 +1,308 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #333;
+  background-color: #d1e5ff;
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: MainFont;
+  src: url(../fonts/Euclid\ Circular\ A\ Regular.ttf);
+}
+
+
+* {
+  font-family: 'MainFont';
+  color: rgb(20, 20, 20);
+}
+
+a {
+  text-decoration: none;
+}
+
+.navbar {
+  padding: 5px;
+  z-index: 999999;
+  color: rgb(255, 255, 255);
+
+  background-color: #ffffff;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.079);
+  position: fixed;
+  width: 100%;
+  font-size: 20px;
+
+
+}
+
+.navbar-brand {
+  font-weight: bold;
+  background: -webkit-linear-gradient(#00d0ff, #001aff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.navbar-nav li img {
+  width: 50px;
+}
+
+#titulo {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+
+.navbar-brand img {
+  width: 50%;
+}
+
+header {
+  text-align: center;
+  height: 50vh;
+  background: linear-gradient(to bottom, #4CAF50, #3e8e41);
+  background-image: url("../images/limpiezasPaula/1.webp");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+header img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+section {
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section:nth-child(even) {
+
+  background-color: #d1e5ff;
+}
+
+section:nth-child(odd) {
+
+  background-color: #ffff;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+
+}
+
+.image-container,
+.text-container {
+  flex: 1;
+  padding: 20px;
+}
+
+.image-container img {
+
+  margin-left: 50px;
+  width: 50%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-container img:hover {
+  transform: scale(1.05);
+}
+
+.image-container svg {
+  width: 100px;
+  height: 100px;
+}
+
+.text-container h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.text-container p {
+  font-size: 16px;
+  color: #555;
+}
+
+#tecnologias {
+  background-color: #d1e5ff;
+}
+
+.navbar-toggler {
+  background: "blue";
+  color: black;
+  border: 2px solid rgb(0, 102, 255) !important;
+}
+
+.navbar-toggler:active {
+  border: 2px solid rgb(0, 102, 255) !important;
+  color: black;
+
+}
+
+.navbar-toggler-icon {
+  background-image: var(--bs-navbar-toggler-icon-bg);
+  color: blue;
+}
+
+#empleado {
+  background-color: #d1e5ff;
+
+  .content {
+    display: flex;
+    flex-direction: row-reverse;
+    .image-container {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+#carouselExampleControls{
+  div {
+    height: 90vh;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+#telefonoSection {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  #telefono {
+    width: 20%;
+    }
+}
+
+
+@media (max-width: 768px) {
+  section {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  section.reverse {
+    flex-direction: column;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+
+
+  }
+
+  .image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    img {
+      width: 80%;
+      margin-left: 0px;
+    }
+  }
+
+  header {
+    height: 25vh;
+  }
+
+  #tecnologias {
+    .content {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+
+  .image-container svg {
+    width: 60px;
+    height: 60px;
+  }
+
+  #empleado {  
+    .content {
+      display: flex;
+      flex-direction: column;
+      .image-container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+  #carouselExampleControls{
+    div {
+      height: 23vh;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  #telefonoSection {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    #telefono {
+      width: 50%;
+    }
+  }
+}
+
+
+
+footer {
+  text-align: center;
+  font-style: italic;
+  padding: 50px;
+  background-color: #d1e5ff;
+
+}
+/* Animaciones */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease-in-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navbar-brand {
+  background: -webkit-linear-gradient(#00d0ff, #001aff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
