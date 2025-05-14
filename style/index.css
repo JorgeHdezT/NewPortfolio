@@ -502,6 +502,7 @@ body {
 
   & section {
     padding: 20px;
+
     & i {
       width: 100%;
       text-align: center;
@@ -560,6 +561,27 @@ body {
     height: 60px;
     border-radius: 15px;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  }
+}
+
+.technologies {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  #svg-container {
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    width: 60%;
+
+    svg {
+      width: 50% !important;
+    }
   }
 }
 
@@ -882,7 +904,8 @@ body {
   font-size: 20px;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 3px solid rgba(0, 0, 0, 0.50); /* Cursor parpadeante */
+  border-right: 3px solid rgba(0, 0, 0, 0.50);
+  /* Cursor parpadeante */
   display: inline-block;
   width: 0;
   animation: typing 6s steps(20, end) infinite, blink 0.7s infinite;
@@ -893,9 +916,12 @@ body {
   0% {
     width: 0;
   }
+
   60% {
-    width: 26ch; /* Usa 'ch' para adaptarse al contenido del texto */
+    width: 26ch;
+    /* Usa 'ch' para adaptarse al contenido del texto */
   }
+
   100% {
     width: 26ch;
   }
