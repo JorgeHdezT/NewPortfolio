@@ -571,7 +571,7 @@ body {
   justify-content: space-between;
 
   #svg-container {
-    
+
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -585,12 +585,35 @@ body {
   }
 }
 
+.language {
+  width: 100% !important;
+  display: flex;
+  svg {
+    height: auto;
+    width: 10%;
+  }
+
+  
+}
+
 
 
 @media (min-width: 1024px) {
 
+  .language {
+    width: 50px !important;
+
+    svg {
+          height: auto;
+
+      width: 100%;
+    }
+
+    margin-right: 20px;
+  }
+
   #svg-container {
-    
+
     display: flex;
     flex-direction: row;
     align-items: center;
