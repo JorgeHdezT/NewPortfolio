@@ -196,24 +196,32 @@ body {
   justify-content: center;
   gap: 20px;
   transition: all 1s;
-  padding: 20px;
+  padding: 10px;
 }
 
 .card {
-  border: none;
+  background-color: rgba(255, 255, 255, 0.594);
+  border: 5px solid white !important;
   padding: 5px;
-  width: 100%;
-  transition: all .5s;
-  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-
-
+  width: 45%; /* tamaño fijo para todas las cards */
+  height: 400px; /* altura fija para todas las cards */
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  transition: all 0.5s;
+  box-shadow:
+    rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    font-size: 15px !important;
 }
-
 
 .card img {
   border-radius: 10px;
   width: 100%;
-
+  height: 150px;
+  object-fit: cover; /* recorta o adapta la imagen para que no se deforme */
   margin-bottom: 10px;
 }
 
@@ -537,7 +545,7 @@ body {
 
 
 .blur {
-  filter: blur(2px);
+  filter: blur(6px);
 }
 
 #Tecnologias {
@@ -749,6 +757,18 @@ body {
     border: none;
     padding: 5px;
     width: 20%;
+    transition: all .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .card img {
+    border: none;
+    padding: 5px;
+    width: 100%;
+    height: 50%;
     transition: all .5s;
     display: flex;
     justify-content: center;
