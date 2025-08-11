@@ -196,25 +196,55 @@ body {
   justify-content: center;
   gap: 20px;
   transition: all 1s;
-  padding: 20px;
+  padding: 10px;
+  width: 100% !important;
+  margin-bottom: 100px !important;
+}
+
+#proyectos-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+  flex-direction: row;
+  margin-top: 25px;
+  padding-bottom: 100px;
 }
 
 .card {
-  border: none;
+  background-color: rgba(255, 255, 255, 0.594);
+  border: 5px solid white !important;
   padding: 5px;
-  width: 100%;
-  transition: all .5s;
-  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-
-
+  width: 45%; /* tamaño fijo para todas las cards */
+  height: 350px; /* altura fija para todas las cards */
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  transition: all 0.5s;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  font-size: 15px !important;
 }
 
+.card a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  flex-direction: column !important;
+}
 
 .card img {
+  margin: 0 auto;
   border-radius: 10px;
-  width: 100%;
-
-  margin-bottom: 10px;
+  width: 100% !important;
+  object-fit: contain !important; /* recorta o adapta la imagen para que no se deforme */
 }
 
 /* On mouse-over, add a deeper shadow */
@@ -566,12 +596,12 @@ body {
 
 .technologies {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  gap: 5px;
 
   #svg-container {
-
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -580,7 +610,7 @@ body {
     width: 60%;
 
     svg {
-      width: 50% !important;
+      width: 35px !important;
     }
   }
 }
@@ -593,8 +623,52 @@ body {
   svg {
     width: 10%;
   }
+}
 
+.selector {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
 
+.selector button {
+  padding: 8px 15px;
+  border: none;
+  background: white;
+  cursor: pointer;
+  transition: all 0.25s;
+  border-radius: 5px;
+  position: relative;
+  z-index: 0;
+  
+}
+
+.selector button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 5px; /* grosor del borde */
+  background: white; /* fondo inicial igual que el botón */
+  z-index: -1;
+}
+
+.selector button:hover::before {
+  background: linear-gradient(
+    90deg,
+    rgba(45, 49, 189, 1) 0%,
+    rgba(0, 209, 255, 1) 100%
+  );
+}
+
+.selector button:hover {
+  color: white;
+  background-clip: padding-box;
+  transform: scale(1.05) rotate(-5deg);
+  box-shadow: 0px 5px 5px rgba(0, 51, 255, 0.518);
 }
 
 
@@ -745,6 +819,7 @@ body {
 
 
   .card {
+    height: 480px;
     border: none;
     padding: 5px;
     width: 20%;
@@ -754,6 +829,7 @@ body {
     align-items: center;
     text-align: center;
   }
+  
 
   .VerMas {
     margin-top: 80px;
