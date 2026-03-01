@@ -3,17 +3,14 @@
   src: url(../fonts/Euclid\ Circular\ A\ Regular.ttf);
 }
 
-
 * {
-  font-family: 'MainFont';
+  font-family: "MainFont";
   color: rgb(20, 20, 20);
 }
 
 a {
   text-decoration: none;
 }
-
-
 
 .navbar {
   padding: 5px;
@@ -35,7 +32,6 @@ a {
 .navbar-nav li img {
   width: 50px;
 }
-
 
 .navbar-brand img {
   width: 50%;
@@ -68,8 +64,6 @@ body {
   & #ola {
     z-index: 1;
     margin-top: -100px;
-
-
   }
 }
 
@@ -94,7 +88,7 @@ body {
 }
 
 #titulo {
-  font-family: 'MainBold';
+  font-family: "MainBold";
   display: flex;
   align-items: cebter;
   justify-content: center;
@@ -129,7 +123,7 @@ body {
   }
 }
 
-#main_content h1:nth-child(n+2) {
+#main_content h1:nth-child(n + 2) {
   color: orange;
 }
 
@@ -139,10 +133,7 @@ body {
 
 .navbar-toggler:active {
   border: 2px solid rgb(0, 102, 255);
-
 }
-
-
 
 /*****/
 
@@ -158,9 +149,6 @@ body {
   box-shadow: none;
 }
 
-
-
-
 .reveal {
   position: relative;
   transform: scale(0.5);
@@ -172,17 +160,13 @@ body {
   opacity: 1;
 }
 
-
 /*Proyectos*/
 
 #Proyectos {
-
   z-index: 1;
   background-color: #d1e5ff;
   height: 100%;
-
 }
-
 
 #Proyectos h1 {
   margin-top: 20px;
@@ -224,7 +208,8 @@ body {
   justify-content: flex-start;
   flex-direction: column;
   transition: all 0.5s;
-  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+  box-shadow:
+    rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
     rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   font-size: 15px !important;
@@ -267,11 +252,8 @@ body {
   background: -webkit-linear-gradient(#00d0ff, #001aff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  transition: all .5s;
+  transition: all 0.5s;
 }
-
-
-
 
 .VerMas {
   margin-bottom: 40px;
@@ -280,12 +262,24 @@ body {
   color: white;
   padding: 10px;
   border-radius: 10px;
-  transition: all .25s;
+  transition: all 0.25s;
 
   background: rgb(45, 49, 189);
-  background: -moz-linear-gradient(90deg, rgba(45, 49, 189, 1) 0%, rgba(0, 209, 255, 1) 100%);
-  background: -webkit-linear-gradient(90deg, rgba(45, 49, 189, 1) 0%, rgba(0, 209, 255, 1) 100%);
-  background: linear-gradient(90deg, rgba(45, 49, 189, 1) 0%, rgba(0, 209, 255, 1) 100%);
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(45, 49, 189, 1) 0%,
+    rgba(0, 209, 255, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(45, 49, 189, 1) 0%,
+    rgba(0, 209, 255, 1) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(45, 49, 189, 1) 0%,
+    rgba(0, 209, 255, 1) 100%
+  );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2d31bd", endColorstr="#00d1ff", GradientType=1);
 }
 
@@ -297,7 +291,6 @@ body {
 .VerMas:hover {
   transform: scale(1.1);
   filter: drop-shadow(0px 10px 5px rgba(0, 0, 0, 0.375));
-
 }
 
 /*REDES*/
@@ -313,7 +306,6 @@ body {
 }
 
 .iconLink {
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -331,16 +323,26 @@ body {
   align-items: top;
   background-color: #d1e5ff !important;
   transition: all 1s;
-  height: 100%
+  height: 100%;
 }
-
-
 
 .iconLink {
   background: rgb(45, 49, 189);
-  background: -moz-linear-gradient(90deg, rgba(45, 49, 189, 1) 0%, rgba(0, 209, 255, 1) 100%);
-  background: -webkit-linear-gradient(90deg, rgba(45, 49, 189, 1) 0%, rgba(0, 209, 255, 1) 100%);
-  background: linear-gradient(90deg, rgba(45, 49, 189, 1) 0%, rgba(0, 209, 255, 1) 100%);
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(45, 49, 189, 1) 0%,
+    rgba(0, 209, 255, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(45, 49, 189, 1) 0%,
+    rgba(0, 209, 255, 1) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(45, 49, 189, 1) 0%,
+    rgba(0, 209, 255, 1) 100%
+  );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2d31bd", endColorstr="#00d1ff", GradientType=1);
   border-radius: 50%;
   box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.258);
@@ -350,12 +352,10 @@ body {
 
   width: 80px;
   height: 80px;
-  ;
   border: 4px solid white;
 }
 
 .iconLink a {
-
   width: 100%;
 
   display: flex;
@@ -364,17 +364,13 @@ body {
 }
 
 .iconLink a img {
-
   filter: invert();
-
 }
 
 #github {
   margin: 0 auto;
   width: 60px;
 }
-
-
 
 .siguiente {
   margin-top: 30px;
@@ -390,7 +386,7 @@ body {
   border: 3px solid white;
   font-size: 30px;
 
-  animation: bounce alternate-reverse infinite .65s;
+  animation: bounce alternate-reverse infinite 0.65s;
 }
 
 @keyframes bounce {
@@ -414,9 +410,7 @@ body {
   background-color: white;
 }
 
-
 #contacto {
-
   background-color: white !important;
 
   & div {
@@ -442,9 +436,21 @@ body {
 
       & button {
         background: rgb(45, 49, 189);
-        background: -moz-linear-gradient(90deg, rgba(45, 49, 189, 1) 0%, rgba(0, 209, 255, 1) 100%);
-        background: -webkit-linear-gradient(90deg, rgba(45, 49, 189, 1) 0%, rgba(0, 209, 255, 1) 100%);
-        background: linear-gradient(90deg, rgba(45, 49, 189, 1) 0%, rgba(0, 209, 255, 1) 100%);
+        background: -moz-linear-gradient(
+          90deg,
+          rgba(45, 49, 189, 1) 0%,
+          rgba(0, 209, 255, 1) 100%
+        );
+        background: -webkit-linear-gradient(
+          90deg,
+          rgba(45, 49, 189, 1) 0%,
+          rgba(0, 209, 255, 1) 100%
+        );
+        background: linear-gradient(
+          90deg,
+          rgba(45, 49, 189, 1) 0%,
+          rgba(0, 209, 255, 1) 100%
+        );
         border: none;
         margin-top: 20px;
         width: 100%;
@@ -454,7 +460,6 @@ body {
     & iframe {
       width: 100%;
       height: 200px;
-
     }
   }
 }
@@ -488,7 +493,9 @@ body {
     }
 
     & .xpcard {
-      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+      box-shadow:
+        rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
       width: 80%;
       /* Ajusta el ancho según sea necesario */
       margin-bottom: 20px;
@@ -502,10 +509,6 @@ body {
       border-radius: 10px;
       /* Bordes redondeados */
     }
-
-
-
-
   }
 }
 
@@ -517,7 +520,9 @@ body {
 
   width: 70%;
 
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  box-shadow:
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   /* Ajusta el ancho según sea necesario */
   margin-bottom: 20px;
   /* Espaciado inferior entre tarjetas */
@@ -547,7 +552,7 @@ body {
     border: 5px solid rgba(255, 255, 255, 0.557);
     box-shadow: 0px 0px 30px rgba(0, 60, 255, 0.439);
     border-radius: 100%;
-    transform: scale(.9);
+    transform: scale(0.9);
   }
 }
 
@@ -562,9 +567,6 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
-
-
-
 
 .blur {
   filter: blur(2px);
@@ -590,7 +592,9 @@ body {
     width: 60px;
     height: 60px;
     border-radius: 15px;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    box-shadow:
+      rgba(0, 0, 0, 0.19) 0px 10px 20px,
+      rgba(0, 0, 0, 0.23) 0px 6px 6px;
   }
 }
 
@@ -614,7 +618,6 @@ body {
     }
   }
 }
-
 
 .language {
   width: 100% !important;
@@ -643,7 +646,6 @@ body {
   border-radius: 5px;
   position: relative;
   z-index: 0;
-  
 }
 
 .selector button::before {
@@ -671,9 +673,16 @@ body {
   box-shadow: 0px 5px 5px rgba(0, 51, 255, 0.518);
 }
 
-
+#logoAtos {
+  margin: 20px;
+  width: 50%;
+}
 
 @media (min-width: 1024px) {
+  #logoAtos {
+    margin: 20px;
+    width: 30%;
+  }
 
   .language {
     width: 50px !important;
@@ -686,7 +695,6 @@ body {
   }
 
   #svg-container {
-
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -706,11 +714,11 @@ body {
     color: #2f2f2f;
     font-weight: bolder;
     border: 4px solid #4f75a8;
-    transition: all .5s;
+    transition: all 0.5s;
   }
 
   #descargarCV:hover {
-    transform: scale(.9);
+    transform: scale(0.9);
   }
 
   #iconos {
@@ -729,7 +737,9 @@ body {
       width: 100px;
       height: 100px;
       border-radius: 15px;
-      box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+      box-shadow:
+        rgba(0, 0, 0, 0.19) 0px 10px 20px,
+        rgba(0, 0, 0, 0.23) 0px 6px 6px;
     }
   }
 
@@ -781,7 +791,6 @@ body {
     z-index: 99999;
     font-size: 20px;
     background-color: white;
-
   }
 
   .navbar-brand {
@@ -798,7 +807,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-
   }
 
   #Proyectos a {
@@ -816,20 +824,17 @@ body {
     cursor: pointer;
   }
 
-
-
   .card {
     height: 480px;
     border: none;
     padding: 5px;
     width: 20%;
-    transition: all .5s;
+    transition: all 0.5s;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
   }
-  
 
   .VerMas {
     margin-top: 80px;
@@ -865,9 +870,21 @@ body {
 
   .iconLink {
     background: rgb(45, 49, 189);
-    background: -moz-linear-gradient(90deg, rgba(45, 49, 189, 1) 0%, rgba(0, 209, 255, 1) 100%);
-    background: -webkit-linear-gradient(90deg, rgba(45, 49, 189, 1) 0%, rgba(0, 209, 255, 1) 100%);
-    background: linear-gradient(90deg, rgba(45, 49, 189, 1) 0%, rgba(0, 209, 255, 1) 100%);
+    background: -moz-linear-gradient(
+      90deg,
+      rgba(45, 49, 189, 1) 0%,
+      rgba(0, 209, 255, 1) 100%
+    );
+    background: -webkit-linear-gradient(
+      90deg,
+      rgba(45, 49, 189, 1) 0%,
+      rgba(0, 209, 255, 1) 100%
+    );
+    background: linear-gradient(
+      90deg,
+      rgba(45, 49, 189, 1) 0%,
+      rgba(0, 209, 255, 1) 100%
+    );
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2d31bd", endColorstr="#00d1ff", GradientType=1);
     border-radius: 50%;
     box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.258);
@@ -877,11 +894,9 @@ body {
 
     width: 80px;
     height: 80px;
-    ;
   }
 
   .iconLink a {
-
     width: 100%;
 
     display: flex;
@@ -890,9 +905,7 @@ body {
   }
 
   .iconLink a img {
-
     filter: invert();
-
   }
 
   #github {
@@ -907,7 +920,6 @@ body {
     flex-direction: row !important;
     gap: 5px;
     align-items: flex-start !important;
-
   }
 
   aside {
@@ -916,15 +928,13 @@ body {
 
   .xpcard {
     border-radius: 25px !important;
-    transition: all .5s;
+    transition: all 0.5s;
   }
 
   .xpcard:hover {
     transform: translateY(-10px);
     border-radius: 25px;
   }
-
-
 
   #xp2 {
     width: 100% !important;
@@ -945,7 +955,6 @@ body {
     margin-bottom: 0;
   }
 
-
   .xpActual {
     margin-top: 10px;
     display: flex;
@@ -964,7 +973,6 @@ body {
       text-align: center;
     }
 
-
     & aside img {
       width: 80%;
       border: 5px solid rgba(255, 255, 255, 0.557);
@@ -972,9 +980,6 @@ body {
       border-radius: 100%;
     }
   }
-
-
-
 
   /* Form */
 
@@ -1008,19 +1013,19 @@ body {
       }
     }
   }
-
 }
-
 
 .typing-effect {
   font-size: 20px;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 3px solid rgba(0, 0, 0, 0.50);
+  border-right: 3px solid rgba(0, 0, 0, 0.5);
   /* Cursor parpadeante */
   display: inline-block;
   width: 0;
-  animation: typing 6s steps(20, end) infinite, blink 0.7s infinite;
+  animation:
+    typing 6s steps(20, end) infinite,
+    blink 0.7s infinite;
 }
 
 /* Ajusta el ancho máximo según el contenido */
